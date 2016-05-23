@@ -4,10 +4,10 @@
 cat("\nBegin vectors vs. arrays demo \n\n")
 
 cat("Creating three demo vectors \n\n")
-v <- c(1:3)  # [1.0 2.0 3.0]
+v <- c(1:3)  # [1 2 3]
 cat(v, "\n\n")
 
-v <- vector(mode="integer", 4)  # [0 0 0 0]
+v <- vector(mode="numeric", 4)  # [0.0 0.0 0.0 0.0]
 cat(v, "\n\n")
 
 v <- c("a", "b", "x")
