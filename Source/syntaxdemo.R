@@ -5,7 +5,7 @@ tri_max = function(x, y, z) {                 # program-defined function
   if (x > y && y > z) {                       # logical AND
     return(x)                                 # return() requires parens
   }
-  else if (y > z) {                           # C-style parens OK here
+  else if (y > z) {                           # C-style braces OK here
     return(y)
   }
   else {
@@ -34,7 +34,7 @@ my_binsearch = function(v, t) {               # program-defined function
     mid <- as.integer(round((lo + hi) / 2))   # built-in round()
     if (v[mid] == t) {                        # equality
       return(mid)
-    } else if (v[mid] < t) {                  # R-style parens optional
+    } else if (v[mid] < t) {                  # R-style braces optional
       lo <- mid + 1
     } else {
       hi <- mid - 1
@@ -51,7 +51,7 @@ xx <- 4.4; yy <- 6.6; zz <- 2.2               # multiple values, one line
 mx <- tri_max(xx, yy, zz)                     # function call
 cat("Largest value is", mx, "\n\n")           # use ',' or paste()
 
-v <- c(1:4)                                   # make vector of floats
+v <- c(1:4)                                   # make vector of integers
 decimals <- 3                                 # '<-' or '=' assignment
 my_display(v, decimals)                       # override default 2 value
 
@@ -59,7 +59,7 @@ v <- vector(mode="integer", length=4)         # make vector of integers
 v[1] <- 9; v[2] <- 6; v[3] <- 7; v[4] <- 8    # multiple statements
 t <- 7                                        
 idx <- my_binsearch(v, t)
-if (idx >= 1) {                               # R-style required here
+if (idx >= 1) {                               # R-style braces required here
   cat("Target ", t, "in cell", idx, "\n\n")
 } else {
   cat("Target", t, "not found \n\n")
