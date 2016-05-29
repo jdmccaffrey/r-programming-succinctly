@@ -19,7 +19,7 @@ my_display = function(v, dec=2) {             # default argument value
   for (i in 1:n) {                            # for-loop
     x <- v[i]                                 # 1-based indexing
     xf <- formatC(x,                          # built-in formatC() 
-      digits=decimals, format="f")            # you can break long lines         
+      digits=dec, format="f")                 # you can break long lines         
     cat(xf, " ")                              # basic display function
   }
   cat("\n\n")                                 # print two newlines                                 
