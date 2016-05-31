@@ -18,7 +18,7 @@ my_print = function(v, dec) {
   n <- length(v)
   for (i in 1:n) {
     x <- v[i]
-    xx <- formatC(x, digits=1, format="f")
+    xx <- formatC(x, digits=dec, format="f")
     cat(xx, " ")
   }
   cat("\n")
